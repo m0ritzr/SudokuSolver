@@ -19,15 +19,10 @@ public interface SudokuSolver {
     /**
      * Returns the number in box r,c. If the box i empty 0 is returned.
      *
-     * @param r
-     *            The row
-     * @param c
-     *            The column
-     * @param number
-     *            The number to insert in r, c
+     * @param r The row
+     * @param c The column
      * @return the number in box r,c or 0 if the box is empty.
-     * @throws IllegalArgumentException
-     *             if r or c is outside [0..getDimension()-1]
+     * @throws IllegalArgumentException if r or c is outside [0..getDimension()-1]
      */
     public int getNumber(int r, int c);
 

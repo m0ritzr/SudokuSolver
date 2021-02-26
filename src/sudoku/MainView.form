@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="sudoku.SudokuSolverView">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="1195" y="20" width="568" height="563"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="78586" binding="fieldPanel" layout-manager="GridLayoutManager" row-count="9" column-count="9" same-size-horizontally="true" same-size-vertically="true" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="81813" class="javax.swing.JTextField" binding="r0c0">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="e333" class="javax.swing.JTextField" binding="r0c3">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b4518" class="javax.swing.JTextField" binding="r0c1">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="a4dd1" class="javax.swing.JTextField" binding="r0c2">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="2cccb" class="javax.swing.JTextField" binding="r0c4">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="6bce9" class="javax.swing.JTextField" binding="r0c8">
+            <constraints>
+              <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="1496b" class="javax.swing.JTextField" binding="r0c7">
+            <constraints>
+              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="16180" class="javax.swing.JTextField" binding="r0c6">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="2746" class="javax.swing.JTextField" binding="r0c5">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="ed802" class="javax.swing.JTextField" binding="r1c0">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="343bf" class="javax.swing.JTextField" binding="r1c3">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="31fea" class="javax.swing.JTextField" binding="r1c1">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b54b7" class="javax.swing.JTextField" binding="r1c2">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="c5dd6" class="javax.swing.JTextField" binding="r1c4">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="db7c7" class="javax.swing.JTextField" binding="r1c8">
+            <constraints>
+              <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f8fbc" class="javax.swing.JTextField" binding="r1c7">
+            <constraints>
+              <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="45ab5" class="javax.swing.JTextField" binding="r1c6">
+            <constraints>
+              <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="9b67f" class="javax.swing.JTextField" binding="r1c5">
+            <constraints>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="59da9" class="javax.swing.JTextField" binding="r2c0">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="1e6d4" class="javax.swing.JTextField" binding="r2c3">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="7b58f" class="javax.swing.JTextField" binding="r2c1">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="eb9fc" class="javax.swing.JTextField" binding="r2c2">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="441e2" class="javax.swing.JTextField" binding="r2c4">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="e4474" class="javax.swing.JTextField" binding="r2c8">
+            <constraints>
+              <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="7b2ac" class="javax.swing.JTextField" binding="r2c7">
+            <constraints>
+              <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="c78fe" class="javax.swing.JTextField" binding="r2c6">
+            <constraints>
+              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="6462a" class="javax.swing.JTextField" binding="r2c5">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="bd00c" class="javax.swing.JTextField" binding="r3c0">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="242e9" class="javax.swing.JTextField" binding="r3c3">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="10257" class="javax.swing.JTextField" binding="r3c1">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="49887" class="javax.swing.JTextField" binding="r3c2">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="7b5a0" class="javax.swing.JTextField" binding="r3c4">
+            <constraints>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="d7111" class="javax.swing.JTextField" binding="r3c8">
+            <constraints>
+              <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="377bd" class="javax.swing.JTextField" binding="r3c7">
+            <constraints>
+              <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="fecc9" class="javax.swing.JTextField" binding="r3c6">
+            <constraints>
+              <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="7e2e0" class="javax.swing.JTextField" binding="r3c5">
+            <constraints>
+              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f489" class="javax.swing.JTextField" binding="r4c0">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b19a0" class="javax.swing.JTextField" binding="r4c3">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="1b916" class="javax.swing.JTextField" binding="r4c1">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f069a" class="javax.swing.JTextField" binding="r4c2">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b4ae2" class="javax.swing.JTextField" binding="r4c4">
+            <constraints>
+              <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="5459d" class="javax.swing.JTextField" binding="r4c8">
+            <constraints>
+              <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="92a20" class="javax.swing.JTextField" binding="r4c7">
+            <constraints>
+              <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="5e81a" class="javax.swing.JTextField" binding="r4c6">
+            <constraints>
+              <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="776de" class="javax.swing.JTextField" binding="r4c5">
+            <constraints>
+              <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="334de" class="javax.swing.JTextField" binding="r5c0">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="a9044" class="javax.swing.JTextField" binding="r5c3">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b1e53" class="javax.swing.JTextField" binding="r5c1">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f06e0" class="javax.swing.JTextField" binding="r5c2">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="ff0c7" class="javax.swing.JTextField" binding="r5c4">
+            <constraints>
+              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="944a2" class="javax.swing.JTextField" binding="r5c8">
+            <constraints>
+              <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="362c3" class="javax.swing.JTextField" binding="r5c7">
+            <constraints>
+              <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f9159" class="javax.swing.JTextField" binding="r5c6">
+            <constraints>
+              <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="a8ed3" class="javax.swing.JTextField" binding="r5c5">
+            <constraints>
+              <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="d1731" class="javax.swing.JTextField" binding="r6c0">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="47200" class="javax.swing.JTextField" binding="r6c3">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="b9cb9" class="javax.swing.JTextField" binding="r6c1">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="9502b" class="javax.swing.JTextField" binding="r6c2">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="a1fc6" class="javax.swing.JTextField" binding="r6c4">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="28fee" class="javax.swing.JTextField" binding="r6c8">
+            <constraints>
+              <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="ac718" class="javax.swing.JTextField" binding="r6c7">
+            <constraints>
+              <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="85d74" class="javax.swing.JTextField" binding="r6c6">
+            <constraints>
+              <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="111c2" class="javax.swing.JTextField" binding="r6c5">
+            <constraints>
+              <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="98d1a" class="javax.swing.JTextField" binding="r7c0">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="51999" class="javax.swing.JTextField" binding="r7c3">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="63ef5" class="javax.swing.JTextField" binding="r7c1">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="cbd95" class="javax.swing.JTextField" binding="r7c2">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="d602b" class="javax.swing.JTextField" binding="r7c4">
+            <constraints>
+              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="f6dce" class="javax.swing.JTextField" binding="r7c8">
+            <constraints>
+              <grid row="7" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="649fc" class="javax.swing.JTextField" binding="r7c7">
+            <constraints>
+              <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="630e7" class="javax.swing.JTextField" binding="r7c6">
+            <constraints>
+              <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="39c6e" class="javax.swing.JTextField" binding="r7c5">
+            <constraints>
+              <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="da601" class="javax.swing.JTextField" binding="r8c0">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="3803d" class="javax.swing.JTextField" binding="r8c3">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="ad2e8" class="javax.swing.JTextField" binding="r8c1">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="76c24" class="javax.swing.JTextField" binding="r8c2">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="a4ffd" class="javax.swing.JTextField" binding="r8c4">
+            <constraints>
+              <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="551b9" class="javax.swing.JTextField" binding="r8c8">
+            <constraints>
+              <grid row="8" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="1ee7d" class="javax.swing.JTextField" binding="r8c7">
+            <constraints>
+              <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="be92d" class="javax.swing.JTextField" binding="r8c6">
+            <constraints>
+              <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <foreground color="-13385879"/>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="29e04" class="javax.swing.JTextField" binding="r8c5">
+            <constraints>
+              <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="50"/>
+                <preferred-size width="50" height="50"/>
+                <maximum-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="bce72" binding="buttonPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="e1172" class="javax.swing.JButton" binding="solveButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Solve"/>
+            </properties>
+          </component>
+          <hspacer id="aab21">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="1bc33" class="javax.swing.JButton" binding="clearButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Clear"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
