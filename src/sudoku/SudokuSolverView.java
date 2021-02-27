@@ -32,6 +32,9 @@ public class SudokuSolverView {
                 }
             }
             solver.setMatrix(nbrs);
+            if (!solver.isAllValid()) {
+                System.out.println("Not all valid!");
+            }
         });
 
     }
