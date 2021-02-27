@@ -36,7 +36,18 @@ public class SudokuSolverView {
                         "Inte alla värden är godkända!",
                         "Fel värden",
                         JOptionPane.ERROR_MESSAGE);
+                return;
             }
+
+            solver.solve();
+
+            for (int r = 0; r < 9; r++) {
+                for (int c = 0; c < 9; c++) {
+                    setNumber(r,c,solver.getNumber(r,c));
+                }
+            }
+
+
         });
 
     }
@@ -79,6 +90,14 @@ public class SudokuSolverView {
             return Integer.parseInt(str);
         } catch (NumberFormatException e) {
             return 0;
+        }
+    }
+    
+    private void setNumber(int r, int c, int nbr) {
+        if (nbr == 0) {
+            sudokuTextFields[r][c].setText("");
+        } else {
+            sudokuTextFields[r][c].setText(Integer.toString(nbr));
         }
     }
 }

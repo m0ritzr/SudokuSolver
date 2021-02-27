@@ -19,7 +19,6 @@ public interface SudokuSolver {
      * @param r The row
      * @param c The column
      * @return the number in box r,c or 0 if the box is empty.
-     * @throws IllegalArgumentException if r or c is outside [0..getDimension()-1]
      */
     public int getNumber(int r, int c);
 
