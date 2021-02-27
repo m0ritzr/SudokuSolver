@@ -4,12 +4,9 @@ public interface SudokuSolver {
     /**
      * Sets the number nbr in box r, c.
      *
-     * @param r
-     *            The row
-     * @param c
-     *            The column
-     * @param nbr
-     *            The number to insert in box r, c
+     * @param r The row
+     * @param c The column
+     * @param nbr The number to insert in box r, c
      * @throws IllegalArgumentException
      *             if r or c is outside [0..getDimension()-1] or
      *             number is outside [1..9]

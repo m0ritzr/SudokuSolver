@@ -2,8 +2,6 @@ package sudoku;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SudokuSolverView {
     private JButton solveButton;
@@ -12,7 +10,7 @@ public class SudokuSolverView {
     private JPanel buttonPanel;
     private JPanel fieldPanel;
     private SudokuTextField[][] sudokuTextFields;
-    private static SudokuSolverModel solver;
+    private static SudokuSolver solver;
 
     public SudokuSolverView() {
         clearButton.addActionListener(e -> {
@@ -26,30 +24,32 @@ public class SudokuSolverView {
 
         solveButton.addActionListener(e -> {
             int[][] nbrs = new int[9][9];
-            for (int r = 0; r<9; r++) {
-                for (int c = 0; c<9; c++) {
+            for (int r = 0; r < 9; r++) {
+                for (int c = 0; c < 9; c++) {
                     nbrs[r][c] = getNumber(r, c);
                 }
             }
             solver.setMatrix(nbrs);
             if (!solver.isAllValid()) {
                 System.out.println("Not all valid!");
+                JOptionPane.showMessageDialog(mainPanel,
+                        "Inte alla värden är godkända!",
+                        "Fel värden",
+                        JOptionPane.ERROR_MESSAGE);
             }
         });
 
     }
 
     public static void main(String[] args) {
-        solver = new SudokuSolverModel();
+        solver = new ClassicSudokuSolver();
 
-        JFrame frame = new JFrame("SudokuSolverView");
+        JFrame frame = new JFrame("Sudoku Solver");
         frame.setContentPane(new SudokuSolverView().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 550);
         frame.setVisible(true);
     }
-
-
 
     private void createUIComponents() {
         fieldPanel = new JPanel();
@@ -59,8 +59,8 @@ public class SudokuSolverView {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 SudokuTextField current = new SudokuTextField();
-                if (((i<3 || i > 5 ) && (j < 3 || j > 5)) || ((i>2 && i<6) && (j>2 && j<6) )) {
-                    current.setBackground(Color.ORANGE);
+                if (((i < 3 || i > 5) && (j < 3 || j > 5)) || ((i > 2 && i < 6) && (j > 2 && j < 6))) {
+                    current.setBackground(Color.orange);
                 }
                 current.setSize(50, 50);
                 current.setHorizontalAlignment(JTextField.CENTER);
