@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SudokuSolverModel implements SudokuSolver {
+public class ClassicSudokuSolver implements SudokuSolver {
     private int[][] sudokuMatrix;
 
-    public SudokuSolverModel() {
+    public ClassicSudokuSolver() {
         sudokuMatrix = new int[9][9];
     }
 
@@ -29,9 +29,7 @@ public class SudokuSolverModel implements SudokuSolver {
         } else {
             sudokuMatrix[r][c] = nbr;
             int[] row = getRow(r);
-
             int[] col = getCol(c);
-
             int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
 
             if (checkForDuplicates(row) && checkForDuplicates(col) && checkForDuplicates(threeByThree)) {
@@ -92,7 +90,7 @@ public class SudokuSolverModel implements SudokuSolver {
                 range[0] = 6;
                 range[1] = 8;
                 range[2] = 3;
-                range[3] = 4;
+                range[3] = 5;
                 break;
             case 8:
                 range[0] = 6;
@@ -169,21 +167,43 @@ public class SudokuSolverModel implements SudokuSolver {
         return false;
     }
 
+    /**
+     *
+     */
     public void clear() {
         for (int[] row : sudokuMatrix) {
             Arrays.fill(row, 0);
         }
     }
 
+    /**
+     * Returns the numbers in the grid. An empty box i represented
+     * by the value 0.
+     *
+     * @return the numbers in the grid
+     */
     public int[][] getMatrix() {
         return Arrays.stream(sudokuMatrix).map(int[]::clone).toArray(int[][]::new);
     }
 
+    /**
+     * Fills the grid with the numbers in nbrs.
+     *
+     * @param nbrs the matrix with the numbers to insert
+     * @throws IllegalArgumentException if nbrs have wrong dimension or containing values not in [0..9]
+     */
     public void setMatrix(int[][] nbrs) {
-        sudokuMatrix = Arrays.stream(nbrs).map(int[]::clone).toArray(int[][]::new);
-        for (int[] row : sudokuMatrix) {
-            System.out.println(Arrays.toString(row));
+        if (nbrs.length != 9 || nbrs[0].length != 9) {
+            throw new IllegalArgumentException("nbrs has wrong dimension");
         }
-        System.out.println("");
+        for (int i = 0; i<9; i++) {
+            for (int j = 0; j<9; j++){
+                if (nbrs[i][j] > 9 || nbrs[i][j] < 0) {
+                    throw new IllegalArgumentException("Value is not in [0..9]");
+                } else {
+                    sudokuMatrix[i][j] = nbrs[i][j];
+                }
+            }
+        }
     }
 }
