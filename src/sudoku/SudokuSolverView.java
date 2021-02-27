@@ -1,100 +1,81 @@
 package sudoku;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SudokuSolverView {
-    private JTextField r0c0;
-    private JTextField r0c3;
-    private JTextField r0c1;
-    private JTextField r0c2;
-    private JTextField r0c4;
-    private JTextField r0c8;
-    private JTextField r0c7;
-    private JTextField r0c6;
-    private JTextField r0c5;
     private JButton solveButton;
     private JButton clearButton;
-    private JTextField r1c0;
-    private JTextField r1c1;
-    private JTextField r1c2;
-    private JTextField r1c3;
-    private JTextField r1c4;
-    private JTextField r1c5;
-    private JTextField r1c6;
-    private JTextField r1c7;
-    private JTextField r1c8;
-    private JTextField r2c0;
-    private JTextField r2c1;
-    private JTextField r2c2;
-    private JTextField r2c3;
-    private JTextField r2c4;
-    private JTextField r2c5;
-    private JTextField r2c6;
-    private JTextField r2c7;
-    private JTextField r2c8;
-    private JTextField r3c0;
-    private JTextField r3c1;
-    private JTextField r3c2;
-    private JTextField r3c3;
-    private JTextField r3c4;
-    private JTextField r3c5;
-    private JTextField r3c6;
-    private JTextField r3c7;
-    private JTextField r3c8;
-    private JTextField r4c0;
-    private JTextField r4c1;
-    private JTextField r4c2;
-    private JTextField r4c3;
-    private JTextField r4c4;
-    private JTextField r4c5;
-    private JTextField r4c6;
-    private JTextField r4c7;
-    private JTextField r4c8;
-    private JTextField r5c0;
-    private JTextField r5c1;
-    private JTextField r5c2;
-    private JTextField r5c3;
-    private JTextField r5c4;
-    private JTextField r5c5;
-    private JTextField r5c6;
-    private JTextField r5c7;
-    private JTextField r5c8;
-    private JTextField r6c0;
-    private JTextField r6c1;
-    private JTextField r6c2;
-    private JTextField r6c3;
-    private JTextField r6c4;
-    private JTextField r6c5;
-    private JTextField r6c6;
-    private JTextField r6c7;
-    private JTextField r6c8;
-    private JTextField r7c0;
-    private JTextField r7c1;
-    private JTextField r7c2;
-    private JTextField r7c3;
-    private JTextField r7c4;
-    private JTextField r7c5;
-    private JTextField r7c6;
-    private JTextField r7c7;
-    private JTextField r7c8;
-    private JTextField r8c0;
-    private JTextField r8c1;
-    private JTextField r8c2;
-    private JTextField r8c3;
-    private JTextField r8c4;
-    private JTextField r8c5;
-    private JTextField r8c6;
-    private JTextField r8c7;
-    private JTextField r8c8;
     private JPanel mainPanel;
     private JPanel buttonPanel;
     private JPanel fieldPanel;
+    private SudokuTextField[][] sudokuTextFields;
+    private static SudokuSolverModel solver;
+
+    public SudokuSolverView() {
+        clearButton.addActionListener(e -> {
+            for (SudokuTextField[] row : sudokuTextFields) {
+                for (SudokuTextField field : row) {
+                    field.setText("");
+                }
+            }
+            solver.clear();
+        });
+
+        solveButton.addActionListener(e -> {
+            int[][] nbrs = new int[9][9];
+            for (int r = 0; r<9; r++) {
+                for (int c = 0; c<9; c++) {
+                    nbrs[r][c] = getNumber(r, c);
+                }
+            }
+            solver.setMatrix(nbrs);
+        });
+
+    }
 
     public static void main(String[] args) {
+        solver = new SudokuSolverModel();
+
         JFrame frame = new JFrame("SudokuSolverView");
         frame.setContentPane(new SudokuSolverView().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        frame.setSize(500, 550);
         frame.setVisible(true);
+    }
+
+
+
+    private void createUIComponents() {
+        fieldPanel = new JPanel();
+        fieldPanel.setLayout(new GridLayout(9, 9));
+        sudokuTextFields = new SudokuTextField[9][9];
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                SudokuTextField current = new SudokuTextField();
+                if (((i<3 || i > 5 ) && (j < 3 || j > 5)) || ((i>2 && i<6) && (j>2 && j<6) )) {
+                    current.setBackground(Color.ORANGE);
+                }
+                current.setSize(50, 50);
+                current.setHorizontalAlignment(JTextField.CENTER);
+                current.setFont(new Font("SansSerif", Font.BOLD, 20));
+                sudokuTextFields[i][j] = current;
+                fieldPanel.add(sudokuTextFields[i][j]);
+            }
+        }
+
+
+    }
+
+    private int getNumber(int r, int c) {
+        String str = sudokuTextFields[r][c].getText();
+        try {
+            return Integer.parseInt(str);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 }
