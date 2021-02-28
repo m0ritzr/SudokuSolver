@@ -30,7 +30,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
      * Gets a number from the spot in row r and column c
      * @param r The row
      * @param c The column
-     * @return
+     * @return the number at row r, column c
      */
     public int getNumber(int r, int c) {
         return sudokuMatrix[r][c];
@@ -38,26 +38,6 @@ public class ClassicSudokuSolver implements SudokuSolver {
 
     public void clearNumber(int r, int c) {
         sudokuMatrix[r][c] = 0;
-    }
-
-    /**
-     * Checks if a number nbr is valid in the sudoku matrix.
-     * @param r row to check
-     * @param c column to check
-     * @param nbr number to check
-     * @return true if number is valid in this spot
-     */
-    public boolean isValid(int r, int c, int nbr) {
-        if (nbr == 0) {
-            return true;
-        } else {
-            setNumber(r, c, nbr);
-            int[] row = getRow(r);
-            int[] col = getCol(c);
-            int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
-            clearNumber(r,c);
-            return !checkForDuplicates(row) && !checkForDuplicates(col) && !checkForDuplicates(threeByThree);
-        }
     }
 
     private int[] getRange(int index) {
@@ -127,6 +107,27 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return (c/3 + (r/3) * 3);
     }
 
+
+    /**
+     * Checks if a number nbr is valid in the sudoku matrix.
+     * @param r row to check
+     * @param c column to check
+     * @param nbr number to check
+     * @return true if number is valid in this spot
+     */
+    public boolean isValid(int r, int c, int nbr) {
+        if (nbr == 0) {
+            return true;
+        } else {
+            setNumber(r, c, nbr);
+            int[] row = getRow(r);
+            int[] col = getCol(c);
+            int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
+            clearNumber(r,c);
+            return !checkForDuplicates(row) && !checkForDuplicates(col) && !checkForDuplicates(threeByThree);
+        }
+    }
+
     /**
      * Checks for duplicates in an array
      * @param array the array to check
@@ -188,6 +189,25 @@ public class ClassicSudokuSolver implements SudokuSolver {
 
     public boolean solve() {
         return solve(0, 0);
+    }
+
+    private boolean solve(int r, int c) {
+       if (c == 9) {                            //next row if col is finished
+           c = 0;
+           r++;
+       }
+        if (r == 9) {                           //Base
+            return true;
+        }
+        if (isEmpty(r,c)) {
+            int i = 0;
+            do {
+                i++;
+                setNumber(r,c,i);
+            } while (!solve(r,c + 1) && i < 9);       //recursive
+            return true;
+        }
+        return false;
     }
 
     /*private boolean solve(int row) {
