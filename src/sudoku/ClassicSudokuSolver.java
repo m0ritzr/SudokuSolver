@@ -195,7 +195,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
     }
 
     public boolean solve() {
-        return solve(0, 0);
+        return solveMoritz(0, 0);
     }
 
     private boolean solveJoel(int r, int c) {
@@ -211,13 +211,14 @@ public class ClassicSudokuSolver implements SudokuSolver {
             do {
                 i++;
                 setNumber(r,c,i);
-            } while (!solve(r,c + 1) && i < 9);       //recursive
+            } while (!solveJoel(r, c + 1) && i < 9);       //recursive
             return true;
            }
+        solveJoel(r, c+1);
         return false;
     }
           
-    private boolean solveMoritz( int row, int col)
+    private boolean solveMoritz(int row, int col)
     {
         if (row == 8 && col == 9) {
             return true;
@@ -229,38 +230,18 @@ public class ClassicSudokuSolver implements SudokuSolver {
         }
 
         if (!isEmpty(row, col))
-            return solve(row, col + 1);
+            return solveMoritz(row, col + 1);
 
         for (int nbr = 1; nbr <= 9; nbr++) {
             if (isValid(row, col, nbr)) {
                 setNumber(row, col, nbr);
-                if (solve(row, col + 1))
+                if (solveMoritz(row, col + 1))
                     return true;
             }
             clearNumber(row, col);
         }
         return false;
     }
-
-    /*private boolean solve(int row) {
-        if (row == 9) {
-            return true;
-        }
-        for (int col = 0; col < 9; col++) {
-            if (isEmpty(row, col)) {
-                for (int nbr = 1; nbr <= 9; nbr++) {
-                    if (isValid(row, col, nbr)) {
-                        setNumber(row, col, nbr);
-                        if (solve(row + 1)) {
-                            return true;
-                        }
-                    }
-                    clearNumber(row, col);
-                }
-            }
-        }
-        return false;
-    }*/
 
     private boolean isEmpty(int r, int c) {
         return sudokuMatrix[r][c] == 0;

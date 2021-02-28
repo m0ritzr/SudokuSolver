@@ -27,37 +27,23 @@ class ClassicSudokuSolverTest {
         solver.solve();
     }
 
-    @org.junit.jupiter.api.Test
-    void isValid() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void getRow() {
-        System.out.println("Row:");
-        System.out.println(Arrays.toString(solver.getRow(0)));
-        System.out.println("");
-    }
-
-    @org.junit.jupiter.api.Test
-    void getCol() {
-        System.out.println("Col:");
-        System.out.println(Arrays.toString(solver.getCol(0)));
-        System.out.println("");
-    }
-
-    @org.junit.jupiter.api.Test
-    void getThreeByThreeAsArray() {
-        System.out.println("ThreeByThree:");
-        System.out.println(Arrays.toString(solver.getThreeByThreeAsArray(0)));
-        System.out.println("");
-    }
 
     @org.junit.jupiter.api.Test
     void getMatrix() {
         int[][] matrix = solver.getMatrix();
-        System.out.println("Matrix:");
-        for(int i = 0; i<9; i++) {
-            System.out.println(Arrays.toString(matrix[i]));
+        int[][] matrixTrue = {
+            {5,4,8,1,7,9,3,6,2},
+            {3,7,6,8,2,4,9,1,5},
+            {1,9,2,5,6,3,8,7,4},
+            {7,8,4,2,1,6,5,9,3},
+            {2,5,9,3,8,7,6,4,1},
+            {6,3,1,9,4,5,7,2,8},
+            {4,1,5,6,9,8,2,3,7},
+            {8,6,7,4,3,2,1,5,9},
+            {9,2,3,7,5,1,4,8,6}
+        };
+        for (int i = 0; i<9; i++) {
+            assertArrayEquals(matrixTrue[i], matrix[i]);
         }
     }
 
