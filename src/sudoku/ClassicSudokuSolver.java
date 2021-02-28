@@ -23,6 +23,13 @@ public class ClassicSudokuSolver implements SudokuSolver {
         sudokuMatrix[r][c] = 0;
     }
 
+    /**
+     *
+     * @param r row to check
+     * @param c column to check
+     * @param nbr number to check
+     * @return true if number is valid in this spot
+     */
     public boolean isValid(int r, int c, int nbr) {
         if (nbr == 0) {
             return true;
@@ -32,11 +39,11 @@ public class ClassicSudokuSolver implements SudokuSolver {
             int[] col = getCol(c);
             int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
 
-            if (checkForDuplicates(row) && checkForDuplicates(col) && checkForDuplicates(threeByThree)) {
-                return true;
-            } else {
+            if (checkForDuplicates(row) || checkForDuplicates(col) || checkForDuplicates(threeByThree)) {
                 sudokuMatrix[r][c] = 0;
                 return false;
+            } else {
+                return true;
             }
         }
     }
@@ -108,6 +115,11 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return (c/3 + (r/3) * 3);
     }
 
+    /**
+     *
+     * @param array the array to check
+     * @return true if array contains a duplicate, false if not
+     */
     private boolean checkForDuplicates(int[] array) {
         Set<Integer> set = new HashSet<>();
 
