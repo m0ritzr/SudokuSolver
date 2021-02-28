@@ -2,6 +2,7 @@ package sudoku;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class SudokuSolverView {
     private JButton solveButton;
@@ -50,6 +51,8 @@ public class SudokuSolverView {
 
         });
 
+        solveButton.addActionListener(new ActionListener() {
+        });
     }
 
     public static void main(String[] args) {

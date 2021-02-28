@@ -116,7 +116,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
     }
 
     /**
-     *
+     *Get out of here
      * @param array the array to check
      * @return true if array contains a duplicate, false if not
      */
@@ -131,7 +131,6 @@ public class ClassicSudokuSolver implements SudokuSolver {
             if (nbr != 0)  {
                 set.add(nbr);
             }
-
         }
 
         return false;
