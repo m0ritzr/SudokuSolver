@@ -56,7 +56,11 @@ public class ClassicSudokuSolver implements SudokuSolver {
             int[] col = getCol(c);
             int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
             clearNumber(r,c);
-            return !checkForDuplicates(row) && !checkForDuplicates(col) && !checkForDuplicates(threeByThree);
+            if (checkForDuplicates(row) || checkForDuplicates(col) || checkForDuplicates(threeByThree)) {
+                return false;
+            } else {
+                return true;
+            }
         }
     }
 
@@ -148,11 +152,15 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return false;
     }
 
-    private int[] getRow(int r) {
-        return sudokuMatrix[r];
+    public int[] getRow(int r) {
+        int[] row = new int[9];
+        for (int i = 0; i<9; i++) {
+            row[i] = sudokuMatrix[r][i];
+        }
+        return row;
     }
 
-    private int[] getCol(int c) {
+    public int[] getCol(int c) {
         int[] col = new int[9];
         for(int i = 0; i<9; i++) {
             col[i] = sudokuMatrix[i][c];
@@ -160,7 +168,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return col;
     }
 
-    private int[] getThreeByThreeAsArray(int index) {
+    public int[] getThreeByThreeAsArray(int index) {
         int[] threeByThree = new int[9];
         int[] ranges = getRange(index);
         int i = 0;
@@ -188,6 +196,31 @@ public class ClassicSudokuSolver implements SudokuSolver {
 
     public boolean solve() {
         return solve(0, 0);
+    }
+
+    private boolean solve( int row, int col)
+    {
+        if (row == 8 && col == 9) {
+            return true;
+        }
+
+        if (col == 9) {
+            row++;
+            col = 0;
+        }
+
+        if (!isEmpty(row, col))
+            return solve(row, col + 1);
+
+        for (int nbr = 1; nbr <= 9; nbr++) {
+            if (isValid(row, col, nbr)) {
+                setNumber(row, col, nbr);
+                if (solve(row, col + 1))
+                    return true;
+            }
+            clearNumber(row, col);
+        }
+        return false;
     }
 
     /*private boolean solve(int row) {
