@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test class for testing the sudoku solver.
+ */
 class ClassicSudokuSolverTest {
     ClassicSudokuSolver solver;
 

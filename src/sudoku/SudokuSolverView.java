@@ -9,6 +9,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 
+/**
+ * Implementation of a view (window) applet for solving sudokus.
+ */
 public class SudokuSolverView {
     private static SudokuSolver solver;
     private JButton solveButton;
