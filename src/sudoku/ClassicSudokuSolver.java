@@ -40,6 +40,30 @@ public class ClassicSudokuSolver implements SudokuSolver {
         sudokuMatrix[r][c] = 0;
     }
 
+    /**
+     * Checks if a number nbr is valid in the sudoku matrix.
+     * @param r row to check
+     * @param c column to check
+     * @param nbr number to check
+     * @return true if number is valid in this spot
+     */
+    public boolean isValid(int r, int c, int nbr) {
+        if (nbr == 0) {
+            return true;
+        } else {
+            setNumber(r, c, nbr);
+            int[] row = getRow(r);
+            int[] col = getCol(c);
+            int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
+            clearNumber(r,c);
+            if (checkForDuplicates(row) || checkForDuplicates(col) || checkForDuplicates(threeByThree)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+
     private int[] getRange(int index) {
         int[] range = new int[4];
         switch(index) {
@@ -107,27 +131,6 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return (c/3 + (r/3) * 3);
     }
 
-
-    /**
-     * Checks if a number nbr is valid in the sudoku matrix.
-     * @param r row to check
-     * @param c column to check
-     * @param nbr number to check
-     * @return true if number is valid in this spot
-     */
-    public boolean isValid(int r, int c, int nbr) {
-        if (nbr == 0) {
-            return true;
-        } else {
-            setNumber(r, c, nbr);
-            int[] row = getRow(r);
-            int[] col = getCol(c);
-            int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
-            clearNumber(r,c);
-            return !checkForDuplicates(row) && !checkForDuplicates(col) && !checkForDuplicates(threeByThree);
-        }
-    }
-
     /**
      * Checks for duplicates in an array
      * @param array the array to check
@@ -149,11 +152,15 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return false;
     }
 
-    private int[] getRow(int r) {
-        return sudokuMatrix[r];
+    public int[] getRow(int r) {
+        int[] row = new int[9];
+        for (int i = 0; i<9; i++) {
+            row[i] = sudokuMatrix[r][i];
+        }
+        return row;
     }
 
-    private int[] getCol(int c) {
+    public int[] getCol(int c) {
         int[] col = new int[9];
         for(int i = 0; i<9; i++) {
             col[i] = sudokuMatrix[i][c];
@@ -161,7 +168,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return col;
     }
 
-    private int[] getThreeByThreeAsArray(int index) {
+    public int[] getThreeByThreeAsArray(int index) {
         int[] threeByThree = new int[9];
         int[] ranges = getRange(index);
         int i = 0;
@@ -191,7 +198,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return solve(0, 0);
     }
 
-    private boolean solve(int r, int c) {
+    private boolean solveJoel(int r, int c) {
        if (c == 9) {                            //next row if col is finished
            c = 0;
            r++;
@@ -206,6 +213,31 @@ public class ClassicSudokuSolver implements SudokuSolver {
                 setNumber(r,c,i);
             } while (!solve(r,c + 1) && i < 9);       //recursive
             return true;
+           }
+        return false;
+    }
+          
+    private boolean solveMoritz( int row, int col)
+    {
+        if (row == 8 && col == 9) {
+            return true;
+        }
+
+        if (col == 9) {
+            row++;
+            col = 0;
+        }
+
+        if (!isEmpty(row, col))
+            return solve(row, col + 1);
+
+        for (int nbr = 1; nbr <= 9; nbr++) {
+            if (isValid(row, col, nbr)) {
+                setNumber(row, col, nbr);
+                if (solve(row, col + 1))
+                    return true;
+            }
+            clearNumber(row, col);
         }
         return false;
     }
