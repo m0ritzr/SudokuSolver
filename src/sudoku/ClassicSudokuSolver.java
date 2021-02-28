@@ -11,10 +11,27 @@ public class ClassicSudokuSolver implements SudokuSolver {
         sudokuMatrix = new int[9][9];
     }
 
+    /**
+     * Sets a number nbr into the matrix in row r and column c
+     * @param r The row
+     * @param c The column
+     * @param nbr The number to insert in box r, c
+     * @throws IllegalArgumentException if number is not [1..9]
+     */
     public void setNumber(int r, int c, int nbr) {
-        sudokuMatrix[r][c] = nbr;
+        if (nbr > 9 || nbr < 1) {
+            throw new IllegalArgumentException("Number is not between 1 and 9");
+        } else {
+            sudokuMatrix[r][c] = nbr;
+        }
     }
 
+    /**
+     * Gets a number from the spot in row r and column c
+     * @param r The row
+     * @param c The column
+     * @return
+     */
     public int getNumber(int r, int c) {
         return sudokuMatrix[r][c];
     }
@@ -24,7 +41,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
     }
 
     /**
-     *
+     * Checks if a number nbr is valid in the sudoku matrix.
      * @param r row to check
      * @param c column to check
      * @param nbr number to check
@@ -34,17 +51,12 @@ public class ClassicSudokuSolver implements SudokuSolver {
         if (nbr == 0) {
             return true;
         } else {
-            sudokuMatrix[r][c] = nbr;
+            setNumber(r, c, nbr);
             int[] row = getRow(r);
             int[] col = getCol(c);
             int[] threeByThree = getThreeByThreeAsArray(getThreeByThreeIndex(r, c));
-
-            if (checkForDuplicates(row) || checkForDuplicates(col) || checkForDuplicates(threeByThree)) {
-                sudokuMatrix[r][c] = 0;
-                return false;
-            } else {
-                return true;
-            }
+            clearNumber(r,c);
+            return !checkForDuplicates(row) && !checkForDuplicates(col) && !checkForDuplicates(threeByThree);
         }
     }
 
@@ -116,7 +128,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
     }
 
     /**
-     *Get out of here
+     * Checks for duplicates in an array
      * @param array the array to check
      * @return true if array contains a duplicate, false if not
      */
@@ -175,8 +187,33 @@ public class ClassicSudokuSolver implements SudokuSolver {
     }
 
     public boolean solve() {
-        return false;
+        return solve(0, 0);
     }
+
+    /*private boolean solve(int row) {
+        if (row == 9) {
+            return true;
+        }
+        for (int col = 0; col < 9; col++) {
+            if (isEmpty(row, col)) {
+                for (int nbr = 1; nbr <= 9; nbr++) {
+                    if (isValid(row, col, nbr)) {
+                        setNumber(row, col, nbr);
+                        if (solve(row + 1)) {
+                            return true;
+                        }
+                    }
+                    clearNumber(row, col);
+                }
+            }
+        }
+        return false;
+    }*/
+
+    private boolean isEmpty(int r, int c) {
+        return sudokuMatrix[r][c] == 0;
+    }
+
 
     /**
      *

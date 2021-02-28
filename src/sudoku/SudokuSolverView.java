@@ -40,7 +40,12 @@ public class SudokuSolverView {
                 return;
             }
 
-            solver.solve();
+            if (!solver.solve()) {
+                JOptionPane.showMessageDialog(mainPanel,
+                        "Sudokun kunde tyvärr inte lösas.",
+                        "Ej lösbart",
+                        JOptionPane.ERROR_MESSAGE);
+            }
 
             for (int r = 0; r < 9; r++) {
                 for (int c = 0; c < 9; c++) {
@@ -51,8 +56,6 @@ public class SudokuSolverView {
 
         });
 
-        solveButton.addActionListener(new ActionListener() {
-        });
     }
 
     public static void main(String[] args) {
