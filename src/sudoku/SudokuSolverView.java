@@ -40,18 +40,17 @@ public class SudokuSolverView {
             }
             solver.setMatrix(nbrs);
             if (!solver.isAllValid()) {
-                System.out.println("Not all valid!");
                 JOptionPane.showMessageDialog(mainPanel,
-                        "Inte alla värden är godkända!",
-                        "Fel värden",
+                        "Not all values are valid!",
+                        "Invalid values!",
                         JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
             if (!solver.solve()) {
                 JOptionPane.showMessageDialog(mainPanel,
-                        "Sudokun kunde tyvärr inte lösas.",
-                        "Ej lösbart",
+                        "The sudoku could not be solved.",
+                        "Not solvable",
                         JOptionPane.ERROR_MESSAGE);
             }
 
