@@ -30,7 +30,7 @@ public class ClassicSudokuSolver implements SudokuSolver {
      * Gets a number from the spot in row r and column c
      * @param r The row
      * @param c The column
-     * @return
+     * @return the number at row r, column c
      */
     public int getNumber(int r, int c) {
         return sudokuMatrix[r][c];
@@ -198,7 +198,26 @@ public class ClassicSudokuSolver implements SudokuSolver {
         return solve(0, 0);
     }
 
-    private boolean solve( int row, int col)
+    private boolean solveJoel(int r, int c) {
+       if (c == 9) {                            //next row if col is finished
+           c = 0;
+           r++;
+       }
+        if (r == 9) {                           //Base
+            return true;
+        }
+        if (isEmpty(r,c)) {
+            int i = 0;
+            do {
+                i++;
+                setNumber(r,c,i);
+            } while (!solve(r,c + 1) && i < 9);       //recursive
+            return true;
+           }
+        return false;
+    }
+          
+    private boolean solveMoritz( int row, int col)
     {
         if (row == 8 && col == 9) {
             return true;
