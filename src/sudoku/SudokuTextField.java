@@ -11,7 +11,7 @@ public class SudokuTextField extends JTextField {
     public SudokuTextField() {
         super();
     }
-
+//Joels kommentar
     @Override
     protected Document createDefaultModel() {
         return new SudokoFieldDocument();
