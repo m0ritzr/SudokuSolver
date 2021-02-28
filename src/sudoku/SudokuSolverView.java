@@ -1,18 +1,26 @@
 package sudoku;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
 
 public class SudokuSolverView {
+    private static SudokuSolver solver;
     private JButton solveButton;
     private JButton clearButton;
     private JPanel mainPanel;
     private JPanel buttonPanel;
     private JPanel fieldPanel;
     private SudokuTextField[][] sudokuTextFields;
-    private static SudokuSolver solver;
 
+    /**
+     * Constructs a new SudokuSolverView window, adds action listeners to the buttons
+     */
     public SudokuSolverView() {
         clearButton.addActionListener(e -> {
             for (SudokuTextField[] row : sudokuTextFields) {
@@ -49,7 +57,7 @@ public class SudokuSolverView {
 
             for (int r = 0; r < 9; r++) {
                 for (int c = 0; c < 9; c++) {
-                    setNumber(r,c,solver.getNumber(r,c));
+                    setNumber(r, c, solver.getNumber(r, c));
                 }
             }
 
@@ -68,6 +76,9 @@ public class SudokuSolverView {
         frame.setVisible(true);
     }
 
+    /**
+     * Creates UI Components <code>fieldPanel</code> and all nine by nine <code>SudokuTextFields</code>
+     */
     private void createUIComponents() {
         fieldPanel = new JPanel();
         fieldPanel.setLayout(new GridLayout(9, 9));
@@ -90,6 +101,13 @@ public class SudokuSolverView {
 
     }
 
+    /**
+     * Gets number from <code>SudokuTextField</code> r,c.
+     *
+     * @param r the row
+     * @param c the column
+     * @return number in the field
+     */
     private int getNumber(int r, int c) {
         String str = sudokuTextFields[r][c].getText();
         try {
@@ -98,7 +116,14 @@ public class SudokuSolverView {
             return 0;
         }
     }
-    
+
+    /**
+     * Sets number in <code>SudokuTextField</code> r,c. If nbr=0, field gets set empty.
+     *
+     * @param r   the row
+     * @param c   the column
+     * @param nbr the number to insert.
+     */
     private void setNumber(int r, int c, int nbr) {
         if (nbr == 0) {
             sudokuTextFields[r][c].setText("");
